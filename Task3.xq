@@ -1,0 +1,2 @@
+ for $x in distinct-values(doc("auction.xml")/site/closed_auctions/closed_auction/buyer/@person)
+            return ($x, count(index-of(doc("auction.xml")/site/closed_auctions/closed_auction/buyer/@person, $x)), '&#xa;')
